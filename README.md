@@ -10,8 +10,7 @@ Open a new window for each OpenClaw installation you manage. Each window is inde
 2. Enter your gateway URL and token to connect to your first installation
 3. Log into a second OpenClaw installation in the new window
 4. Repeat for as many installations as you manage
-5. Arrange and resize your windows however you want. 
-Bonus; Your sessions persist between launches
+5. Arrange and resize your windows however you want. Your sessions persist between launches
 
 ## Requirements
 
