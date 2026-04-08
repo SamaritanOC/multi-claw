@@ -1,4 +1,4 @@
-# MultiClaw
+# 🦞 MultiClaw
 
 MultiClaw is a Linux desktop app that lets you run multiple OpenClaw Mission Control sessions at once, each in its own window.
 
