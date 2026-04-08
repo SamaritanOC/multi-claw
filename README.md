@@ -1,17 +1,17 @@
 # MultiClaw
 
-A multi-instance OpenClaw desktop app for administrators managing more than one OpenClaw installation.
+MultiClaw is a desktop app that lets you run multiple OpenClaw Mission Control sessions at once, each in its own window.
 
-MultiClaw lets you open multiple independent OpenClaw Mission Control sessions side by side — each in its own window, each with its own persistent login. No browser tabs, no juggling credentials.
+Open a new window for each OpenClaw installation you manage. Each window is independent, with its own login, its own session, arranged however you want on your desktop
 
 ## How it works
 
-Each window is a fully independent OpenClaw session. Open as many windows as you need, log each one into a different OpenClaw installation, and arrange them however you want on your desktop.
-MultiClaw Window 1          MultiClaw Window 2
-└── OpenClaw Instance A     └── OpenClaw Instance B
-└── Tailscale gateway       └── Tailscale gateway
-└── Agents, models          └── Agents, models
-memory, sessions            memory, sessions
+* Open MultiClaw — the OpenClaw Mission Control login screen appears automatically
+* Enter your gateway URL and token to connect to your first installation
+* Right-click anywhere in the window and select "New Window"
+* Log into a second OpenClaw installation in the new window
+* Repeat for as many installations as you manage
+* Arrange and resize the windows however you want — your sessions persist between launches
 
 ## Requirements
 
