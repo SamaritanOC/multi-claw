@@ -1,6 +1,6 @@
 # MultiClaw
 
-MultiClaw is a desktop app that lets you run multiple OpenClaw Mission Control sessions at once, each in its own window.
+MultiClaw is a Linux desktop app that lets you run multiple OpenClaw Mission Control sessions at once, each in its own window.
 
 Open a new window for each OpenClaw installation you manage. Each window is independent, with its own login, its own session, arranged however you want on your desktop
 
@@ -72,12 +72,6 @@ npm install
 npm run electron:build
 sudo dpkg -i dist-app/multi-claw-*-amd64.deb
 ```
-
-## Free vs paid
-
-MultiClaw is free and open source. The free version supports unlimited windows.
-
-A hosted/managed version with additional features is planned for teams and enterprise operators.
 
 ## License
 
