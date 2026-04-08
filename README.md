@@ -1,7 +1,5 @@
 # 🦞 MultiClaw
-<div style="float: right; margin-left: 10px;">
-![MultiClaw](https://labb.run/wp-content/uploads/2026/04/icon.png)
-</div>
+<img srrc="https://labb.run/wp-content/uploads/2026/04/icon.png">
 MultiClaw is a Linux desktop app that lets you run multiple OpenClaw Mission Control sessions at once, each in its own window.
 
 Open a new window for each OpenClaw installation you manage. Each window is independent, with its own login, its own session, arranged however you want on your desktop
