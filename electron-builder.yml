@@ -1,0 +1,42 @@
+publish:
+  provider: github
+  owner: SamaritanOC
+  repo: multi-claw
+
+appId: io.github.samaritanoc.multi-claw
+productName: MultiClaw
+executableName: multi-claw
+copyright: Copyright 2026 SamaritanOC
+artifactName: multi-claw-${version}-${arch}.${ext}
+
+directories:
+  output: dist-app
+  buildResources: build
+
+files:
+  - dist-electron/**/*
+  - control-ui/**/*
+
+asarUnpack:
+  - control-ui/**/*
+
+linux:
+  target:
+    - deb
+    - AppImage
+  category: Utility
+  icon: build/icon.png
+  executableName: multi-claw
+  description: Multi-instance OpenClaw dashboard for administrators managing multiple nodes
+
+deb:
+  depends:
+    - libgtk-3-0
+    - libnotify4
+    - libnss3
+    - libxss1
+    - libxtst6
+    - xdg-utils
+    - libatspi2.0-0
+    - libdrm2
+    - libgbm1
