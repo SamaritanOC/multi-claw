@@ -76,3 +76,7 @@ sudo dpkg -i dist-app/multi-claw-*-amd64.deb
 ## License
 
 MIT
+
+## Support The Samaritan Project
+
+This tool is part of the Samaritan Project, a build-in-public OSINT platform running on self-hosted AI infrastructure. Follow along and contribute at [The Samaritan Project — Buy Me A Coffee](https://buymeacoffee.com/thesamaritanproject)
