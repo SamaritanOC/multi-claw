@@ -1,6 +1,6 @@
 # MultiClaw
 <img style="float:right; margin-left: 20px;" src="https://labb.run/wp-content/uploads/2026/04/icon.png">
-MultiClaw is a Linux desktop app that lets you remotely run multiple OpenClaw Mission Control sessions at once. Each window is independent, with its own login, its own session, arranged however you want on your desktop
+MultiClaw lets you run multiple, fully functional, OpenClaw Mission Control dashboards on a remote Windows or Linux computer.Each window is independent, with its own login, its own session, arranged however you want on your desktop
 
 ## How it works
 
@@ -34,20 +34,26 @@ chmod +x MultiClaw.AppImage
 ./MultiClaw.AppImage
 ```
 
-## Usage
+### First launch
 
-1. Open MultiClaw from your application menu
-2. The OpenClaw Mission Control login screen appears automatically
-3. Enter your gateway URL and token to connect
-4. Right-click anywhere in the window and select **New Window** to open a second instance
-5. Log into a different OpenClaw installation in the new window
-6. Arrange and resize windows however you like
+1. Open the MultiClaw app
+2. Enter your gateway URL (e.g. https://your-machine.tailnet-name.ts.net)
+3. Enter your gateway token (found in ~/.openclaw/openclaw.json under gateway.auth.token)
+4. Click Connect
+5. On your OpenClaw host, approve the pairing request:
+```bash
+openclaw devices list
+openclaw devices approve <requestId>
+```
+- Pairing is a one-time step per device. After that the app connects automatically on every launch.
+- Pairing codes expire after **1 hour**. If approval times out, close RemoteClaw for Linux, reopen it, and approve the new pairing request before the hour is up.
+- If you do not see a pending device, confirm your gateway URL is correct and that Tailscale is connected on both machines.
 
 Each window remembers its session between launches — you won't need to log in again unless your token expires.
 
 ## Opening a new window
 
-Right-click anywhere in any MultiClaw window and select **New Window**, or use the **MultiClaw** menu in the menu bar and select **New Window** (Ctrl+N).
+Right-click anywhere in any MultiClaw window and select **New Window**, or use the **MultiClaw** menu in the menu bar and select **New Window** (Ctrl+N). Repeat the process. 
 
 ## Wayland / display issues
 
