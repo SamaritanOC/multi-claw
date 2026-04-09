@@ -23,9 +23,8 @@ jobs:
         with:
           node-version: '22'
 
-      - name: Install Node dependencies
+      - name: Install dependencies
         run: npm install
-        working-directory: windows
 
       - name: Compile Windows Electron main
         run: npx tsc -p windows/tsconfig.electron.json
