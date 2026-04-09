@@ -10,7 +10,7 @@ copyright: Copyright 2026 SamaritanOC
 artifactName: multiclaw-windows-setup.${ext}
 
 extraMetadata:
-  main: windows/dist-electron/main.js
+  main: dist-electron/main.js
 
 directories:
   output: dist-app
