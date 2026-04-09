@@ -1,0 +1,37 @@
+{
+  "name": "multi-claw-windows",
+  "version": "1.0.0",
+  "main": "dist-electron/main.js",
+  "description": "Multi-instance OpenClaw desktop app for Windows — manage multiple OpenClaw installations at once",
+  "keywords": [
+    "openclaw",
+    "multi-instance",
+    "ai-dashboard",
+    "self-hosted-ai",
+    "electron",
+    "developer-tools"
+  ],
+  "license": "MIT",
+  "author": {
+    "name": "SamaritanOC",
+    "email": "admin@seeker.one"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SamaritanOC/multi-claw.git"
+  },
+  "homepage": "https://github.com/SamaritanOC/multi-claw",
+  "scripts": {
+    "electron:dev": "NODE_ENV=development electron .",
+    "electron:build": "tsc -p tsconfig.electron.json && electron-builder --publish never",
+    "electron:compile": "tsc -p tsconfig.electron.json"
+  },
+  "dependencies": {
+    "electron-updater": "^6.3.9"
+  },
+  "devDependencies": {
+    "electron": "^41.0.3",
+    "electron-builder": "^26.8.1",
+    "typescript": "^5"
+  }
+}

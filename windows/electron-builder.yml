@@ -1,0 +1,36 @@
+publish:
+  provider: github
+  owner: SamaritanOC
+  repo: multi-claw
+
+appId: io.github.samaritanoc.multi-claw-windows
+productName: MultiClaw
+executableName: MultiClaw
+copyright: Copyright 2026 SamaritanOC
+artifactName: multiclaw-windows-setup.${ext}
+
+extraMetadata:
+  main: windows/dist-electron/main.js
+
+directories:
+  output: dist-app
+  buildResources: windows/build
+
+files:
+  - windows/dist-electron/**/*
+  - control-ui/**/*
+
+asarUnpack:
+  - control-ui/**/*
+
+win:
+  target:
+    - nsis
+  icon: windows/build/icon.ico
+
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+  shortcutName: MultiClaw
