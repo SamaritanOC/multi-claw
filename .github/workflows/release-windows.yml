@@ -23,21 +23,19 @@ jobs:
         with:
           node-version: '22'
 
-      - name: Install dependencies
+      - name: Install Node dependencies
         run: npm install
         working-directory: windows
 
       - name: Compile Windows Electron main
-        run: npx tsc -p tsconfig.electron.json
-        working-directory: windows
+        run: npx tsc -p windows/tsconfig.electron.json
 
       - name: Build Windows installer
-        run: npx electron-builder --win --config electron-builder.yml --publish never
-        working-directory: windows
+        run: npx electron-builder --win --config windows/electron-builder.yml --publish never
 
       - name: Upload to GitHub Release
         uses: softprops/action-gh-release@v2
         with:
-          files: windows/dist-app/multiclaw-windows-setup.exe
+          files: dist-app/multiclaw-windows-setup.exe
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
