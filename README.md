@@ -61,7 +61,7 @@ openclaw devices approve <requestId>
 - Pairing codes expire after **1 hour**. If approval times out, close MultiClaw, reopen it, and approve the new pairing request before the hour is up.
 - If you do not see a pending device, confirm your gateway URL is correct and that Tailscale is connected on both machines.
 
-Each window remembers its session between launches — you won't need to log in again unless your token expires.
+Each window remembers its session between launches, you won't need to log in again unless your token expires.
 
 ## Opening a new window
 
