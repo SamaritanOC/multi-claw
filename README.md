@@ -1,7 +1,19 @@
 # MultiClaw
+
 <img style="float:right; margin-left: 20px;" src="https://labb.run/wp-content/uploads/2026/04/icon.png">
-Built with OpenClaw administrators in mind, MultiClaw lets you run multiple, fully functional, OpenClaw Mission Control dashboards on a remote Windows or Linux computer. 
-Each window is independent, with its own login, its own session, arranged however you want on your desktop
+
+Built with OpenClaw administrators in mind, MultiClaw lets you run multiple, fully functional, OpenClaw Mission Control dashboards on a remote Windows or Linux computer. Each window is independent, with its own login, its own session, arranged however you want on your desktop
+
+## Download
+
+| OS | Download |
+|---|---|
+| Linux (Debian/Ubuntu/Parrot) | [multi-claw-amd64.deb](https://github.com/SamaritanOC/multi-claw/releases/latest/download/multi-claw-amd64.deb) |
+| Windows 11 | [multiclaw-windows-setup.exe](https://github.com/SamaritanOC/multi-claw/releases/latest/download/multiclaw-windows-setup.exe) |
+
+For Windows installation instructions see [windows/README.md](windows/README.md).
+
+---
 
 ## How it works
 
@@ -21,14 +33,12 @@ Each window is independent, with its own login, its own session, arranged howeve
 ## Installation
 
 Download the latest release:
-
 ```bash
 wget https://github.com/SamaritanOC/multi-claw/releases/latest/download/multi-claw-amd64.deb
 sudo dpkg -i multi-claw-amd64.deb
 ```
 
 Or install the AppImage:
-
 ```bash
 wget https://github.com/SamaritanOC/multi-claw/releases/latest/download/MultiClaw.AppImage
 chmod +x MultiClaw.AppImage
@@ -46,22 +56,22 @@ chmod +x MultiClaw.AppImage
 openclaw devices list
 openclaw devices approve <requestId>
 ```
+
 - Pairing is a one-time step per device. After that the app connects automatically on every launch.
-- Pairing codes expire after **1 hour**. If approval times out, close RemoteClaw for Linux, reopen it, and approve the new pairing request before the hour is up.
+- Pairing codes expire after **1 hour**. If approval times out, close MultiClaw, reopen it, and approve the new pairing request before the hour is up.
 - If you do not see a pending device, confirm your gateway URL is correct and that Tailscale is connected on both machines.
 
 Each window remembers its session between launches — you won't need to log in again unless your token expires.
 
 ## Opening a new window
 
-Right-click anywhere in any MultiClaw window and select **New Window**, or use the **MultiClaw** menu in the menu bar and select **New Window** (Ctrl+N). Repeat the process. 
+Right-click anywhere in any MultiClaw window and select **New Window**, or use the **MultiClaw** menu in the menu bar and select **New Window** (Ctrl+N). Repeat the process.
 
 ## Wayland / display issues
 
 MultiClaw is an Electron app. On Linux systems running Wayland, the app may fail to launch or render a blank window.
 
 **Fix — force XWayland mode:**
-
 ```bash
 multi-claw --ozone-platform=x11
 ```
