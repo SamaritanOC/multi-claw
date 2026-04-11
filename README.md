@@ -4,6 +4,9 @@
 
 Built with OpenClaw administrators in mind, MultiClaw lets you run multiple, fully functional, OpenClaw Mission Control dashboards on a remote Windows or Linux computer. Each window is independent, with its own login, its own session, arranged however you want on your desktop
 
+## Who is this for?
+OpenClaw administrators who run  multiple installations and need an easier way to access thier Mission Control panels from one, remote device. 
+
 ## Download
 
 | OS | Download |
